@@ -1,4 +1,5 @@
-const assertEqual = function (actual, expected) {
+/* eslint-disable func-style */
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed:  ${actual}  === ${expected}`);
   } else {

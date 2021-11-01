@@ -1,8 +1,9 @@
+/* eslint-disable func-style */
 function eqArrays(arr1, arr2) {
   return arr1[0] === arr2[0] && arr1[1] === arr2[1] && arr1[2] === arr2[2];
 }
 
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed:  ${actual}  === ${expected}`);
   } else {
@@ -10,7 +11,7 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-const middle = function (array) {
+const middle = function(array) {
   let newArray = [];
   if (array.length === 1 || array.length === 2) {
     return newArray;
