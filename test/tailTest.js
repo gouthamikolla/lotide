@@ -1,6 +1,11 @@
 /* eslint-disable no-undef */
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.join(), ["Lighthouse", "Labs"].join());
+describe("#tail", () => {
+  it("returns 'LighthouseLabs' for ['Hello', 'Lighthouse', 'Labs']", () => {
+
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result.join(),[ "Lighthouse", "Labs"].join());
+  });
+});
