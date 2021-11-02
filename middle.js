@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable func-style */
-/*function eqArrays(arr1, arr2) {
+function eqArrays(arr1, arr2) {
   return arr1[0] === arr2[0] && arr1[1] === arr2[1] && arr1[2] === arr2[2];
 }
 
@@ -11,10 +10,6 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Asserion Failed: ${actual} !== ${expected}`);
   }
 };
-*/
-
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(array) {
   let newArray = [];
@@ -33,4 +28,9 @@ const middle = function(array) {
   return newArray;
 };
 
-module.exports = middle;
+assertArraysEqual(middle([1]), []); // => []
+assertArraysEqual(middle([1, 2]), []); // => []
+
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
